@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Hidratación Basal</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Hidratación Basal</h1>
+            <p>Complete el dato necesario</p>
+            <input type="number" placeholder="Peso en kg">
+            <p>* Debe completar todos los datos</p>
+            <button>Calcular</button>
+            <div class="results">
+                <h3>Método utilizado: Holliday-Segar</h3>
+                <p>Volumen diario = </p>
+                <p>Mantenimiento = </p>
+                <p>m+m/2 = </p>
+            </div>
+            <!-- <div class="results">
+                <h3>Método utilizado: Superficie corporal</h3>
+                <p>SC * 1500 = </p>
+                <p>SC * 2000 = </p>
+            </div> -->
+        </div>
+        <div>
+            <h1>¿Cómo se calcula?</h1>
+            <h3>Utilizando el método Holliday-Segar:</h3>
+            <ul>
+                <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
+                <li>Se suman 50cc por cada kilo de peso por arriba de 10kg, hasta 20kg.</li>
+                <li>De 20kg para arriba, se suman 20cc por cada kilo adicional.</li>
+            </ul>
+            <h3>Utilizando el método de Superficie corporal:</h3>
+            <ul>
+                <li>Cuando el niño pesa mas de 30kg, se utiliza la fórmula: SC = ( (peso * 4) + 7) / (peso + 90)</li>
+                <li>El resultado se multiplica por 1500 o por 2000 para hallar el volumen diario en cc.</li>
+                <li>El medico decide cual de los dos resultados utilizar.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
