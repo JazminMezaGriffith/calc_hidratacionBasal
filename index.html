@@ -8,29 +8,28 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="contenedor">
-        <div id="calculadora">
-            <div class="contenido">
+    <div id="container">
+        <div id="calculator">
+            <div class="content">
                 <h1>Hidratación Basal</h1>
                 <p>Complete el dato necesario</p>
                 <input type="number" placeholder="Peso en kg">
                 <p id="error">* Debe completar todos los datos</p>
                 <button>Calcular</button>
+
                 <div class="results">
                     <h3>Método utilizado: Holliday-Segar</h3>
-                    <p>Volumen diario = </p>
-                    <p>Mantenimiento = </p>
-                    <p>m+m/2 = </p>
+                    <ul>
+                        <li>Volumen diario = </li>
+                        <li>Mantenimiento = </li>
+                        <li>m+m/2 = </li>
+                    </ul>
                 </div>
-                <!-- <div class="results">
-                    <h3>Método utilizado: Superficie corporal</h3>
-                    <p>SC * 1500 = </p>
-                    <p>SC * 2000 = </p>
-                </div> -->
             </div>
         </div>
-        <div id="detalle">
-            <div class="contenido">
+
+        <div id="details">
+            <div class="content">
                 <h1>¿Cómo se calcula?</h1>
                 <h3>Utilizando el método de Holliday-Segar:</h3>
                 <ul>

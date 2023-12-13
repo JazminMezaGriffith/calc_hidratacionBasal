@@ -28,9 +28,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 resultsContainer.innerHTML = `
                     <h3>Método utilizado: Holliday-Segar</h3>
-                    <p>Volumen diario = ${hidratacion_diaria} cc</p>
-                    <p>Mantenimiento = ${flujo_horario} cc/hr</p>
-                    <p>m+m/2 = ${m_mas_m2} cc/hr</p>
+                    <ul>
+                        <li>Volumen diario = ${hidratacion_diaria} cc</li>
+                        <li>Mantenimiento = ${flujo_horario} cc/hr</li>
+                        <li>m+m/2 = ${m_mas_m2} cc/hr</li>
+                    </ul>
                 `;
             } else {
                 const superficie_corporal = ((peso * 4) + 7) / (peso + 90);
@@ -39,8 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 resultsContainer.innerHTML = `
                     <h3>Método utilizado: Superficie corporal</h3>
-                    <p>SC * 1500 = ${hidratacion_diaria_1500} cc</p>
-                    <p>SC * 2000 = ${hidratacion_diaria_2000} cc</p>
+                    <ul>
+                        <li>SC * 1500 = ${hidratacion_diaria_1500} cc</li>
+                        <li>SC * 2000 = ${hidratacion_diaria_2000} cc</li>
+                    </ul>
                 `;
             }
 

@@ -4,63 +4,41 @@ body{
     background: #f6f5f7; 
     font-family: 'Montserrat', sans-serif;
     color: #3E363F;
+    font-size: 16px;
 }
 
-#contenedor{
-    width: 900px;
-    height: 500px;
-    text-align: center;
-    /* Estas 3 lineas se encargan de centrar el div vertical y horizontalmente */
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    border-radius: 10px;
-    overflow: hidden; 
+#container {
+    width: 90%;
+    max-width: 62.5em;
+    height: 31.25em;
+    
+    margin: 60px auto;
+    
+    border-radius: 20px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-      0 10px 10px rgba(0,0,0,0.22);
-  }  
+                0 10px 10px rgba(0,0,0,0.22);
 
-#calculadora{
-    background: white;
-    /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
-    width: 50%;
-    height: 100%;
-    float: left;
-}
-
-#detalle{
-    background: #FF416C;
-    /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
-    width: 50%;
-    height: 100%;
-    float: left;
-    color: #f6f5f7;
-}
-
-.contenido{
-    /* Estas tres lineas van a centrar el contenido verticalmente dentro de cada div */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
-    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:    "calculator     details"
+                            "calculator     details";
 }
 
 input {
 	width: 70%;
-    padding: 12px 15px;
+    padding: 0.75em 0.9375em;
     border: none;
     background-color: #eee;
 }
 
 button {
-    font-size: 15px;
 	font-weight: bold;
-	padding: 12px 45px;
-    margin: 15px;
+	padding: 0.75em 2.8125em;
+    margin: 0.9375em;
 	border-radius: 30px;
-	background-color: #FF416C;
-	border: 1px solid #FF416C;
+	background-color: #9043bd;
+	border: 1px solid #9043bd;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -71,16 +49,69 @@ button:active {
 	transform: scale(0.95);
 }
 
-#error{
-    color: red;
-    font-weight: bold;
-    display: none;
+#container #calculator,
+#container #details {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calculator {
+    background: #FFFFFF;
+    padding: 1.25em;
+    border-radius: 20px 0px 0px 20px;
+    grid-area: calculator;
+}
+
+#details{
+    background: #9043bd;
+    color: #f6f5f7;
+    padding: 1.25em;
+    border-radius: 0px 20px 20px 0px;
+    grid-area: details;
 }
 
 .results{
     color: #0A81D1;
     font-weight: bold;
-    font-size: 15px;
-    margin-bottom: 5px;
+    font-size: 14px;
     display: none;
+}
+
+ul {
+    text-align: left;
+}
+
+#error{
+    color: rgb(255, 0, 55);
+    font-weight: bold;
+    display: none;
+}
+
+@media screen and (max-width: 992px){
+    body{
+        font-size: 13px;
+    }
+    #container {
+        margin: 100px auto;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        font-size: 12px;
+    }
+    #container {
+        margin: 60px auto;
+        height: auto;
+        grid-template-areas:    "calculator     calculator"
+                                "details        details";
+    }
+    #calculator {
+        border-radius: 20px 20px 0px 0px;
+    }
+    #details{
+        border-radius: 0px 0px 20px 20px;
+    }
 }
